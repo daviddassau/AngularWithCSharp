@@ -66,3 +66,6 @@ app.controller("HomeController", ["$scope",
 ]);
 ```
 3. If you build and run the program now, you should be able to see "Hello World" in the browser
+
+### Optional things
+- In `_Layout.cshtml` around line 19 that starts with `@Html.ActionLink...`, you can change `"Application name"` to your actual application name.
