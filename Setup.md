@@ -19,7 +19,7 @@ BundleConfig.RegisterBundles(BundleTable.Bundles);
 ```C#
 defaults: new { action = "Index", controller="Home", id = UrlParameter.Optional }
 ```
-8. Right-click on your project name, and go to Proerties. Under the Web tab, in the Start Action section, select the Specific Page radio button, but leave the field blank.
+8. Right-click on your project name, and go to Proerties. Under the Web tab, in the Start Action section, select the "Don't open a page" radio button. This will prevent a new window from popping up every time you run your program.
 9. Navigate to your `BundleConfig.cs` file, and underneath the Bootstrap stuff, add the following:
 ```C#
 bundles.Add(new ScriptBundle("~/bundles/angular").Include(
