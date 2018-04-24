@@ -55,3 +55,12 @@ app.config(["$routeProvider", function ($routeProvider) {
     {{message}}  
 </h2>
 ```
+2. Add a `HomeController.js` to the `controllers` folder. Put these lines of code in:
+```JavaScript
+app.controller("HomeController", ["$scope", 
+    function ($scope) { 
+        $scope.message = "Hello World"; 
+    }
+]);
+```
+3. If you build and run the program now, you should be able to see "Hello World" in the browser
