@@ -46,4 +46,4 @@ app.config(["$routeProvider", function ($routeProvider) {
           
 </div>
 ```
-14. 
+14. Add an `index.html` file to the `partials` folder.
