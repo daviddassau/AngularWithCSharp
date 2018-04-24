@@ -49,4 +49,9 @@ app.config(["$routeProvider", function ($routeProvider) {
 
 #### That's pretty much it for setting up AngularJS with your .NET project. Below are additional steps you can take to get things to show up in your browser when you run the program.
 
-1. Add an `index.html` file to the `partials` folder.
+1. Add an `index.html` file to the `partials` folder. Put these lines of code in:
+```HTML
+<h2>
+    {{message}}  
+</h2>
+```
