@@ -13,3 +13,4 @@ RouteConfig.RegisterRoutes(RouteTable.Routes);
 FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 BundleConfig.RegisterBundles(BundleTable.Bundles);
 ```
+5. Right-click on the `Views` folder and add a new folder called `Home`. In that new Home folder, add a new View called `Index`, with Template set to Empty (without model), Use a layout page by clicking on the dots, navigate to Views > Shared, and click on `_Layout.cshtml`.
