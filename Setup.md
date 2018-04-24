@@ -27,3 +27,8 @@ bundles.Add(new ScriptBundle("~/bundles/angular").Include(
           "~/Scripts/angular-route.js"));
 ```
 10. Navigate to the `_Layout.cshtml` and add this underneath the Bootstrap Scripts down at the bottom: `@Scripts.Render("~/bundles/angular")`
+11. Create a new folder in your project called `app`. Inside that folder, make two more folders, called `partials` and `controllers`.
+12. In the `app` folder create a new JS file called `app.js`. Inside that file, put this line of code:
+```JavaScript
+var app = angular.module("NameOfYourApplication",["ngRoute"]);
+```
