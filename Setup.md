@@ -69,3 +69,4 @@ app.controller("HomeController", ["$scope",
 
 ### Optional things
 - In `_Layout.cshtml` around line 19 that starts with `@Html.ActionLink...`, you can change `"Application name"` to your actual application name.
+- At the footer, change `My ASP.NET Application` to your app name.
