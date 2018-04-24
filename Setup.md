@@ -31,6 +31,14 @@ bundles.Add(new ScriptBundle("~/bundles/angular").Include(
 12. In the `app` folder create a new JS file called `app.js`. Inside that file, put this line of code:
 ```JavaScript
 var app = angular.module("NameOfYourApplication",["ngRoute"]);
+
+app.config(["$routeProvider", function ($routeProvider) {
+    $routeProvider.when("/",
+    {
+        templateUrl: "/app/partials/index.html",
+        controller: "HomeController"
+    })
+}]);
 ```
 13. In the `Index.cshtml` file, delete the `h2` tags, and put the following:
 ```HTML
@@ -38,3 +46,4 @@ var app = angular.module("NameOfYourApplication",["ngRoute"]);
           
 </div>
 ```
+14. 
