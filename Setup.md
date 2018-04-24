@@ -29,7 +29,7 @@ bundles.Add(new ScriptBundle("~/bundles/angular").Include(
           .IncludeDirectory("~/app/controllers","*.js",true));
 ```
 10. Navigate to the `_Layout.cshtml` and add this underneath the Bootstrap Scripts down at the bottom: `@Scripts.Render("~/bundles/angular")`. Then inside the opening body tag (probably somewhere around line 10) and add `ng-app="NameOfYourApplication"`.
-11. Create a new folder in your project called `app`. Inside that folder, make two more folders, called `partials` and `controllers`.
+11. Create a new folder in your project called `app`. Inside that folder, make two more folders, called `partials` and `controllers`. In the `partials` folder create a `index.html` file. In the `controllers` folder create a `HomeController.js` file.
 12. In the `app` folder create a new JS file called `app.js`. Inside that file, put this line of code:
 ```JavaScript
 var app = angular.module("NameOfYourApplication",["ngRoute"]);
@@ -49,15 +49,15 @@ app.config(["$routeProvider", function ($routeProvider) {
 </div>
 ```
 
-#### That's pretty much it for setting up AngularJS with your .NET project. Below are additional steps you can take to get things to show up in your browser when you run the program.
+### That's pretty much it for setting up AngularJS with your .NET project. Below are additional steps you can take to get things to show up in your browser when you run the program.
 
-1. Add an `index.html` file to the `partials` folder. Put these lines of code in:
+1. In the `index.html` file in the `partials` folder, put these lines of code in:
 ```HTML
 <h2>
     {{message}}  
 </h2>
 ```
-2. Add a `HomeController.js` to the `controllers` folder. Put these lines of code in:
+2. In the `HomeController.js` in the `controllers` folder, put these lines of code in:
 ```JavaScript
 app.controller("HomeController", ["$scope", 
     function ($scope) { 
@@ -67,6 +67,6 @@ app.controller("HomeController", ["$scope",
 ```
 3. If you build and run the program now, you should be able to see "Hello World" in the browser
 
-### Optional things
+### Other Optional Things
 - In `_Layout.cshtml` around line 19 that starts with `@Html.ActionLink...`, you can change `"Application name"` to your actual application name.
 - At the footer, change `My ASP.NET Application` to your app name.
