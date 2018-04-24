@@ -24,7 +24,9 @@ defaults: new { action = "Index", controller="Home", id = UrlParameter.Optional 
 ```C#
 bundles.Add(new ScriptBundle("~/bundles/angular").Include(
           "~/Scripts/angular.js",
-          "~/Scripts/angular-route.js"));
+          "~/Scripts/angular-route.js"),
+          "~/app/app.js",
+          .IncludeDirectory("~/app/controllers","*.js",true));
 ```
 10. Navigate to the `_Layout.cshtml` and add this underneath the Bootstrap Scripts down at the bottom: `@Scripts.Render("~/bundles/angular")`. Then inside the opening body tag (probably somewhere around line 10) and add `ng-app="NameOfYourApplication"`.
 11. Create a new folder in your project called `app`. Inside that folder, make two more folders, called `partials` and `controllers`.
